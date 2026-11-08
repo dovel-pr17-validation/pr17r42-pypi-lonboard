@@ -1,0 +1,6 @@
+# TextLayer
+
+::: lonboard.experimental.TextLayer
+    options:
+      inherited_members: true
+      show_labels: false

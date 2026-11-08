@@ -1,0 +1,79 @@
+import type { GeoArrowHeatmapLayerProps } from "@geoarrow/deck.gl-geoarrow";
+import { GeoArrowHeatmapLayer } from "@geoarrow/deck.gl-geoarrow";
+import type { WidgetModel } from "@jupyter-widgets/base";
+
+import { omitUndefined } from "../../util.js";
+import type { FloatAccessorInput, PointVector } from "../types.js";
+import { accessFloatData } from "../types.js";
+import { BaseArrowLayerModel } from "./base.js";
+
+export class HeatmapModel extends BaseArrowLayerModel {
+  static layerType = "heatmap";
+
+  protected radiusPixels: GeoArrowHeatmapLayerProps["radiusPixels"] | null;
+  protected colorRange: GeoArrowHeatmapLayerProps["colorRange"] | null;
+  protected intensity: GeoArrowHeatmapLayerProps["intensity"] | null;
+  protected threshold: GeoArrowHeatmapLayerProps["threshold"] | null;
+  protected colorDomain: GeoArrowHeatmapLayerProps["colorDomain"] | null;
+  protected aggregation: GeoArrowHeatmapLayerProps["aggregation"] | null;
+  protected weightsTextureSize:
+    | GeoArrowHeatmapLayerProps["weightsTextureSize"]
+    | null;
+  protected debounceTimeout:
+    | GeoArrowHeatmapLayerProps["debounceTimeout"]
+    | null;
+
+  protected getPosition?: PointVector | null;
+  protected getWeight?: FloatAccessorInput | null;
+
+  constructor(model: WidgetModel, updateStateCallback: () => void) {
+    super(model, updateStateCallback);
+
+    this.initRegularAttribute("radius_pixels", "radiusPixels");
+    this.initRegularAttribute("color_range", "colorRange");
+    this.initRegularAttribute("intensity", "intensity");
+    this.initRegularAttribute("threshold", "threshold");
+    this.initRegularAttribute("color_domain", "colorDomain");
+    this.initRegularAttribute("aggregation", "aggregation");
+    this.initRegularAttribute("weights_texture_size", "weightsTextureSize");
+    this.initRegularAttribute("debounce_timeout", "debounceTimeout");
+
+    this.initVectorizedAccessor("get_position", "getPosition");
+    this.initVectorizedAccessor("get_weight", "getWeight");
+  }
+
+  layerProps(batchIndex: number): GeoArrowHeatmapLayerProps {
+    return {
+      id: `${this.model.model_id}-${batchIndex}`,
+      data: this.table.batches[batchIndex],
+      ...omitUndefined({
+        radiusPixels: this.radiusPixels,
+        colorRange: this.colorRange,
+        intensity: this.intensity,
+        threshold: this.threshold,
+        colorDomain: this.colorDomain,
+        aggregation: this.aggregation,
+        weightsTextureSize: this.weightsTextureSize,
+        debounceTimeout: this.debounceTimeout,
+        getPosition: this.getPosition?.data[batchIndex],
+        getWeight: accessFloatData(this.getWeight, batchIndex),
+      }),
+    };
+  }
+
+  render(): GeoArrowHeatmapLayer[] {
+    const layers: GeoArrowHeatmapLayer[] = [];
+    for (let batchIdx = 0; batchIdx < this.table.batches.length; batchIdx++) {
+      layers.push(
+        new GeoArrowHeatmapLayer({
+          ...this.baseLayerProps(batchIdx),
+          ...this.layerProps(batchIdx),
+          // deck.gl's HeatmapLayer doesn't support picking. It draws the heatmap
+          // colors in the picking pass, which decode to an arbitrary index.
+          pickable: false,
+        }),
+      );
+    }
+    return layers;
+  }
+}

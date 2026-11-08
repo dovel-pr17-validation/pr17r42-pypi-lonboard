@@ -1,0 +1,635 @@
+# Changelog
+
+## [0.17.0] - 2026-10-02
+
+See release post for a human-oriented summary of changes.
+
+### What's Changed
+
+* ci: Fix docs publish auth by @kylebarron in https://github.com/developmentseed/lonboard/pull/1161
+* ci: add uv package manager to dependabot by @lhoupert in https://github.com/developmentseed/lonboard/pull/1162
+* fix: Add morecantile as dependency in COG jupyter notebooks by @kylebarron in https://github.com/developmentseed/lonboard/pull/1170
+* fix: overture-geoparquet example by @matyasrada in https://github.com/developmentseed/lonboard/pull/1163
+* chore: Switch to pnpm by @kylebarron in https://github.com/developmentseed/lonboard/pull/1181
+* refactor: Use upstream deck.gl-raster `RasterTileLayer` by @kylebarron in https://github.com/developmentseed/lonboard/pull/1183
+* fix: Support h3 4.5.0  by @kylebarron in https://github.com/developmentseed/lonboard/pull/1206
+* fix: Support CRS-parameterized GEOMETRY type in DuckDB 1.5 by @kylebarron in https://github.com/developmentseed/lonboard/pull/1205
+* fix: Don't use ThreadPoolExecutor in emscripten by @kylebarron in https://github.com/developmentseed/lonboard/pull/1204
+* feat: Read CRS from DuckDB 1.5 GEOMETRY columns by @kylebarron in https://github.com/developmentseed/lonboard/pull/1210
+* feat: Add an example for Geohash Layer by @aryanxk02 in https://github.com/developmentseed/lonboard/pull/1242
+* fix: Render polygon fills in HTML exports opened from file:// by @kylebarron in https://github.com/developmentseed/lonboard/pull/1264
+* fix: Handle empty record batches and empty geometries by @kylebarron in https://github.com/developmentseed/lonboard/pull/1269
+* fix: Fix RasterLayer.from_pmtiles by @kylebarron in https://github.com/developmentseed/lonboard/pull/1274
+* fix: Remove listeners when a child model is finalized by @kylebarron in https://github.com/developmentseed/lonboard/pull/1277
+* ci: Only group minor and patch npm updates in Dependabot by @kylebarron in https://github.com/developmentseed/lonboard/pull/1281
+* fix: Set selected_index to the row's position in the whole table by @kylebarron in https://github.com/developmentseed/lonboard/pull/1283
+* fix: Remove upper bound on anywidget by @kylebarron in https://github.com/developmentseed/lonboard/pull/1282
+* fix: Give each tile of a BitmapTileLayer its own layer id by @kylebarron in https://github.com/developmentseed/lonboard/pull/1285
+* refactor: Replace `isDefined` spreads with an `omitUndefined` helper by @kylebarron in https://github.com/developmentseed/lonboard/pull/1292
+* fix: reset example notebook kernelspec to python3 by @kylebarron in https://github.com/developmentseed/lonboard/pull/1254
+* chore: Use Node 24 in CI, publishing, and local development by @kylebarron in https://github.com/developmentseed/lonboard/pull/1294
+* fix: Normalize geohash-layer example notebook kernelspec by @kylebarron in https://github.com/developmentseed/lonboard/pull/1295
+* fix: Honor `MapView(repeat=...)` in the overlaid and interleaved basemap modes by @kylebarron in https://github.com/developmentseed/lonboard/pull/1302
+* fix: Support boolean data in `apply_categorical_cmap` by @kylebarron in https://github.com/developmentseed/lonboard/pull/1300
+* docs: Document the pre-commit hooks in DEVELOP.md by @kylebarron in https://github.com/developmentseed/lonboard/pull/1298
+* fix: Read DuckDB relations through the Arrow PyCapsule Interface by @kylebarron in https://github.com/developmentseed/lonboard/pull/1303
+* feat: Type the callback of `Map.on_click` by @kylebarron in https://github.com/developmentseed/lonboard/pull/1304
+* chore!: Remove the deprecated `basemap_style` and `CartoBasemap` by @kylebarron in https://github.com/developmentseed/lonboard/pull/1307
+* docs: Show how to change the output of `viz` by @kylebarron in https://github.com/developmentseed/lonboard/pull/1297
+* feat: Add a setter for `TripsLayer.current_time` by @kylebarron in https://github.com/developmentseed/lonboard/pull/1308
+* fix: Raise on GeoArrow coordinates that aren't floating point by @kylebarron in https://github.com/developmentseed/lonboard/pull/1306
+* docs: Fix the examples on the Shiny, GeoPandas and GeoArrow pages by @kylebarron in https://github.com/developmentseed/lonboard/pull/1296
+* docs: Add SedonaDB to the ecosystem docs by @kylebarron in https://github.com/developmentseed/lonboard/pull/1299
+* fix: Show the map controls on deck-first maps by @kylebarron in https://github.com/developmentseed/lonboard/pull/1309
+* ci: Remove the duplicate pytest run by @kylebarron in https://github.com/developmentseed/lonboard/pull/1313
+* chore: Bump Tailwind CSS to 4 and replace NextUI with HeroUI by @kylebarron in https://github.com/developmentseed/lonboard/pull/1291
+* feat: Warn when a map has more chunks than deck.gl can pick from by @kylebarron in https://github.com/developmentseed/lonboard/pull/1305
+* docs: Store example screenshots in assets/ and strip saved widget state by @kylebarron in https://github.com/developmentseed/lonboard/pull/1314
+* docs: Turn off layer attribute labels in docs by @kylebarron in https://github.com/developmentseed/lonboard/pull/1198
+* ci: Publish docs per minor version by @kylebarron in https://github.com/developmentseed/lonboard/pull/1315
+* chore: Fix the picking limit in a comment by @kylebarron in https://github.com/developmentseed/lonboard/pull/1316
+* fix: Accept `current_time` in the `TripsLayer` constructor by @kylebarron in https://github.com/developmentseed/lonboard/pull/1317
+* docs: Deploy a JupyterLite demo with the docs by @kylebarron in https://github.com/developmentseed/lonboard/pull/1320
+
+### New Contributors
+
+* @lhoupert made their first contribution in https://github.com/developmentseed/lonboard/pull/1162
+* @matyasrada made their first contribution in https://github.com/developmentseed/lonboard/pull/1163
+* @aryanxk02 made their first contribution in https://github.com/developmentseed/lonboard/pull/1242
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.16.0...v0.17.0
+
+## [0.16.0] - 2026-04-02
+
+### What's Changed
+
+* ci: Set up trusted publishing by @kylebarron in https://github.com/developmentseed/lonboard/pull/1141
+* feat: raster layer async geotiff integration by @kylebarron in https://github.com/developmentseed/lonboard/pull/1137
+* feat: RasterLayer: better printing of exceptions from render_tile by @kylebarron in https://github.com/developmentseed/lonboard/pull/1150
+* refactor: Clean up for RasterLayer COG integration by @kylebarron in https://github.com/developmentseed/lonboard/pull/1152
+* fix: Fix using `fly_to` in overlay/interleaved basemap mode by @kylebarron in https://github.com/developmentseed/lonboard/pull/1155
+* feat: Prepare raster for release by @kylebarron in https://github.com/developmentseed/lonboard/pull/1158
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.15.0...v0.16.0
+
+## [0.15.0] - 2026-03-13
+
+### New Features
+
+* Geocoder control by @kylebarron in https://github.com/developmentseed/lonboard/pull/1124
+
+### Bug fixes
+
+* fix: Make sure BaseLayer.highlight_color has .tag(sync=True) by @shawnboltz in https://github.com/developmentseed/lonboard/pull/1131
+
+### Documentation updates
+
+* Update Lonboard logo and devseed favicon by @kylebarron in https://github.com/developmentseed/lonboard/pull/1125
+
+### Other
+
+* refactor: trait cleanup, remove verbose `sync=True` everywhere by @kylebarron in https://github.com/developmentseed/lonboard/pull/1133
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.14.0...v0.15.0
+
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.14.0...v0.15.0
+
+## [0.14.0] - 2026-02-11
+
+### Breaking changes
+
+* feat!: Require Python 3.11 by @kylebarron in https://github.com/developmentseed/lonboard/pull/1090
+
+### New Features
+
+* feat: PMTiles constructor for RasterLayer by @kylebarron in https://github.com/developmentseed/lonboard/pull/1105
+* feat: Added explicit support for numpy number types by @shawnboltz in https://github.com/developmentseed/lonboard/pull/1056
+* feat: Create display window under Map for rendering callback exceptions by @kylebarron in https://github.com/developmentseed/lonboard/pull/1085
+* DataFilterExtension get_filter_category by @ATL2001 in https://github.com/developmentseed/lonboard/pull/884
+* feat(cli): Add --version flag to CLI by @kylebarron in https://github.com/developmentseed/lonboard/pull/1092
+
+
+### Bug Fixes
+
+* fix: Fixup error in sidecar example notebook by @mfisher87 in https://github.com/developmentseed/lonboard/pull/1077
+* fix: Support pandas v3 by @kylebarron in https://github.com/developmentseed/lonboard/pull/1107
+* fix: Fix map.set_view_state does not set pitch and bearing by @jwardbond in https://github.com/developmentseed/lonboard/pull/1055
+
+### Other
+
+* chore: Switch to `biome` for Typescript linting by @kylebarron in https://github.com/developmentseed/lonboard/pull/1103
+* refactor: migrate from XState to Zustand for state management by @vgeorge in https://github.com/developmentseed/lonboard/pull/1042
+
+### New Contributors
+
+* @mfisher87 made their first contribution in https://github.com/developmentseed/lonboard/pull/1077
+* @shawnboltz made their first contribution in https://github.com/developmentseed/lonboard/pull/1056
+* @jwardbond made their first contribution in https://github.com/developmentseed/lonboard/pull/1055
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.13.0...v0.14.0
+
+## [0.13.0] - 2025-11-05
+
+### New Features :sparkles:
+
+- feat: Suppress JupyterLab context menu on Map right click by @kylebarron in https://github.com/developmentseed/lonboard/pull/889
+- feat: Support two render modes: Standard/deck.gl-first and MapboxOverlay by @kylebarron in https://github.com/developmentseed/lonboard/pull/921
+- feat: Create richer `Basemap` class and deprecate `basemap_style` arg by @kylebarron in https://github.com/developmentseed/lonboard/pull/935
+- feat: Move `TripsLayer` and `ArcLayer` out of experimental by @kylebarron in https://github.com/developmentseed/lonboard/pull/983
+- feat: Support for map controls by @kylebarron in https://github.com/developmentseed/lonboard/pull/924
+- feat: Provide default controls for Map by @kylebarron in https://github.com/developmentseed/lonboard/pull/992
+- feat: Switch basemap default to overlaid (maplibre-controlled) by @kylebarron in https://github.com/developmentseed/lonboard/pull/993
+- feat: H3 layer by @kylebarron in https://github.com/developmentseed/lonboard/pull/917
+- feat: Add A5Layer by @kylebarron in https://github.com/developmentseed/lonboard/pull/1001
+- feat: Add geohash and s2 layers by @kylebarron in https://github.com/developmentseed/lonboard/pull/1007
+- feat: Implement view state validation for non map-view states by @kylebarron in https://github.com/developmentseed/lonboard/pull/1008
+- feat: Add view parameter to viz by @kylebarron in https://github.com/developmentseed/lonboard/pull/1013
+
+### Performance improvements :zap:
+
+- perf: use ThreadPoolExecutor for Parquet serialization and bounds computation by @kylebarron in https://github.com/developmentseed/lonboard/pull/902
+- perf: Define top-level earcut worker pool by @kylebarron in https://github.com/developmentseed/lonboard/pull/954
+- perf: Call np.mean once across axis instead of once per column by @kylebarron in https://github.com/developmentseed/lonboard/pull/995
+- perf: Remove typedArrayManager settings override by @kylebarron in https://github.com/developmentseed/lonboard/pull/1003
+- perf: Avoid generating str repr of `table` during rendering by @kylebarron in https://github.com/developmentseed/lonboard/pull/1015
+
+### Bug fixes :bug:
+
+- fix: Fix HeatmapLayer by bumping deck.gl to 9.2 by @kylebarron in https://github.com/developmentseed/lonboard/pull/910
+- fix: Add `pyarrow` to `geopandas` extra in `pyproject.toml` by @kylebarron in https://github.com/developmentseed/lonboard/pull/970
+- fix: Fix "fuzziness" of path layers by removing `useDevicePixels` default by @kylebarron in https://github.com/developmentseed/lonboard/pull/969
+- fix: Ensure that the default value of `Map.basemap` is `MaplibreBasemap` if no value of `basemap` was passed. by @kylebarron in https://github.com/developmentseed/lonboard/pull/963
+- fix: Restore DataFilterExtension functionality with vectorized accessor input by @kylebarron in https://github.com/developmentseed/lonboard/pull/977
+- fix: Fix ArcLayer with numpy coords input by @kylebarron in https://github.com/developmentseed/lonboard/pull/989
+- fix: Ensure view state is updated in Python with a maplibre map renderer by @kylebarron in https://github.com/developmentseed/lonboard/pull/1017
+- fix: Hack a react re-render on canvas resize by @kylebarron in https://github.com/developmentseed/lonboard/pull/1022
+
+### Documentation :book:
+
+- docs: Fix list rendering in `Map.add_layer` API Docs by @kylebarron in https://github.com/developmentseed/lonboard/pull/952
+- docs: Add developer docs about code profiling by @kylebarron in https://github.com/developmentseed/lonboard/pull/1016
+
+### Breaking changes :hammer:
+
+- chore!: Remove deprecated `con` parameter to `viz` by @kylebarron in https://github.com/developmentseed/lonboard/pull/953
+
+### Other changes
+
+- feat: automated UI testing with Playwright by @vgeorge in https://github.com/developmentseed/lonboard/pull/906
+- chore: Add eslint import ordering to CI by @kylebarron in https://github.com/developmentseed/lonboard/pull/931
+- test: add bbox selection overlay mode e2e test by @vgeorge in https://github.com/developmentseed/lonboard/pull/933
+- refactor: Refactor HTML map export by @kylebarron in https://github.com/developmentseed/lonboard/pull/934
+- refactor: Refactor model initialization logic by @kylebarron in https://github.com/developmentseed/lonboard/pull/923
+- test: add pytest-ipywidgets bbox testing, remove playwright by @vgeorge in https://github.com/developmentseed/lonboard/pull/999
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.12.1...v0.13.0
+
+## [0.12.1] - 2025-09-18
+
+### New Features :sparkles:
+
+- feat: New example with marimo and GeoDatafusion by @kylebarron in https://github.com/developmentseed/lonboard/pull/881
+
+### Bug fixes :bug:
+
+- fix: Fix rendering Arrow input with string view/binary view column by @kylebarron in https://github.com/developmentseed/lonboard/pull/872
+- fix: Add `__all__` declarations to modules to fix pylance warnings by @kylebarron in https://github.com/developmentseed/lonboard/pull/876
+- feat: Support struct GeoArrow input for ArcLayer positions by @kylebarron in https://github.com/developmentseed/lonboard/pull/877
+
+### Documentation :book:
+
+- docs: Fix examples with GeoArrow Rust by @kylebarron in https://github.com/developmentseed/lonboard/pull/878
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.12.0...v0.12.1
+
+## [0.12.0] - 2025-09-13
+
+### New Features :sparkles:
+
+- feat: Add new example notebook on accessing spatially-partitioned Overture GeoParquet datasets by @kylebarron in https://github.com/developmentseed/lonboard/pull/832
+- feat: Allow passing GeoArrow arrays and chunked arrays directly to layer constructors by @kylebarron in https://github.com/developmentseed/lonboard/pull/828
+- feat: Support parsing `geoarrow.geometry` input; read WKB/WKT without shapely dep by @kylebarron in https://github.com/developmentseed/lonboard/pull/846
+- feat: Use `100%` as default CSS height by @ATL2001 in https://github.com/developmentseed/lonboard/pull/835
+- feat: Migrate notebook examples to dependency management using `juv` by @kylebarron in https://github.com/developmentseed/lonboard/pull/821
+
+### Breaking changes :hammer:
+
+- chore!: Require Python 3.10 or higher by @kylebarron in https://github.com/developmentseed/lonboard/pull/843
+
+### Bug fixes :bug:
+
+- fix(arc-layer): Fix migration example by @kylebarron in https://github.com/developmentseed/lonboard/pull/830
+- fix: Bump geoarrow-rust-core to fix handling of geoarrow geometry by @kylebarron in https://github.com/developmentseed/lonboard/pull/864
+
+### Other changes
+
+- perf: Avoid numpy memory copy when shapely-produced offsets are already `int32` by @kylebarron in https://github.com/developmentseed/lonboard/pull/845
+- chore: Suggest shallow clone of repo in DEVELOP.md by @kylebarron in https://github.com/developmentseed/lonboard/pull/825
+- chore: Fix mypy lint errors by @kylebarron in https://github.com/developmentseed/lonboard/pull/826
+- ci: Add CI test for Python 3.13 by @kylebarron in https://github.com/developmentseed/lonboard/pull/844
+- chore: Cleaner handling of chunked array input into BaseArrowLayer.**init** by @kylebarron in https://github.com/developmentseed/lonboard/pull/855
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.11.1...v0.12.0
+
+## [0.11.1] - 2025-06-18
+
+### Bug fixes :bug:
+
+- fix: move duckdb imports to inside function by @danielsparing in https://github.com/developmentseed/lonboard/pull/813
+- chore: Use `>=` in typing-extensions version constraint by @kylebarron in https://github.com/developmentseed/lonboard/pull/814
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.11.0...v0.11.1
+
+## [0.11.0] - 2025-06-17
+
+### Breaking changes :hammer:
+
+- Require Python 3.9 or higher by @kylebarron in https://github.com/developmentseed/lonboard/pull/743
+
+### New features :sparkles:
+
+- feat: Reinstate tooltip by @vgeorge in https://github.com/developmentseed/lonboard/pull/736.
+  You can now turn on the tooltip by passing `show_tooltip=True` to `Map`. You may also want to pass `show_side_panel=False` to disable the side panel.
+- Clicked point to Lonboard map by @ATL2001 in https://github.com/developmentseed/lonboard/pull/671
+- feat: Support `geoarrow.box` arrays from GeoArrow 0.2 spec by @kylebarron in https://github.com/developmentseed/lonboard/pull/793
+- feat: Allow passing Arrow table as positional argument to layer constructors by @kylebarron in https://github.com/developmentseed/lonboard/pull/795
+- Switch to the DuckDB Expression API to mitigate sql injection risk by @danielsparing in https://github.com/developmentseed/lonboard/pull/777
+
+### Visual changes :art:
+
+- Improve side panel layout by @vgeorge in https://github.com/developmentseed/lonboard/pull/701
+
+### Bug fixes :bug:
+
+- Scope tailwind preflight styles by @Bjoern-Rapp in https://github.com/developmentseed/lonboard/pull/740
+- Pass state in `to_html` by @kylebarron in https://github.com/developmentseed/lonboard/pull/726
+- use dependency state in export by @knaaptime in https://github.com/developmentseed/lonboard/pull/731
+- fix: ensure GeoArrow field names are set in conversion from shapely by @kylebarron in https://github.com/developmentseed/lonboard/pull/794
+- Fix accessing default connection for duckdb 1.2 by @kylebarron in https://github.com/developmentseed/lonboard/pull/772
+- Sanitize geomcolname by @danielsparing in https://github.com/developmentseed/lonboard/pull/769
+
+### Documentation :book:
+
+- Replace DS Medium link by LinkedIn by @willemarcel in https://github.com/developmentseed/lonboard/pull/700
+- Geoarrow docstring update by @ATL2001 in https://github.com/developmentseed/lonboard/pull/705
+- Add docs page with external resources by @kylebarron in https://github.com/developmentseed/lonboard/pull/710
+- Panel example update by @ATL2001 in https://github.com/developmentseed/lonboard/pull/746
+- docs: Reword section in "How it works" to reflect GeoParquet 1.1 by @kylebarron in https://github.com/developmentseed/lonboard/pull/804
+- docs: Add duckdb intersphinx mapping by @kylebarron in https://github.com/developmentseed/lonboard/pull/800
+- Remove references to custom connection parameter by @danielsparing in https://github.com/developmentseed/lonboard/pull/784
+- updates for polygon layer documentation by @ATL2001 in https://github.com/developmentseed/lonboard/pull/789
+
+### Internal changes :wrench:
+
+- Switch dependency management to uv by @kylebarron in https://github.com/developmentseed/lonboard/pull/721
+- Support Py3.12 in tests by constraining pyproj in lockfile to versions with wheels by @ceholden in https://github.com/developmentseed/lonboard/pull/745
+- Enable more ruff linters by @kylebarron in https://github.com/developmentseed/lonboard/pull/753
+- Reduce ruff warnings by @danielsparing in https://github.com/developmentseed/lonboard/pull/778
+- chore: Ensure support for GeoArrow 0.2 CRS by @kylebarron in https://github.com/developmentseed/lonboard/pull/797
+- chore: Bump deck.gl to 9.1 by @kylebarron in https://github.com/developmentseed/lonboard/pull/802
+- test: Test that parsing WKB/WKT works with Arrow view types by @kylebarron in https://github.com/developmentseed/lonboard/pull/801
+
+### New Contributors
+
+- @knaaptime made their first contribution in https://github.com/developmentseed/lonboard/pull/731
+- @ceholden made their first contribution in https://github.com/developmentseed/lonboard/pull/745
+- @Bjoern-Rapp made their first contribution in https://github.com/developmentseed/lonboard/pull/740
+- @danielsparing made their first contribution in https://github.com/developmentseed/lonboard/pull/769
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.10.3...v0.11.0
+
+## [0.10.3] - 2024-10-15
+
+### Fixes :bug:
+
+- Downgrade minimum traitlets version to fix use with Colab. https://github.com/developmentseed/lonboard/pull/687
+
+## [0.10.2] - 2024-10-10
+
+### Fixes :bug:
+
+- Fix using `TripsLayer.from_movingpandas` with numpy v2.
+
+## [0.10.1] - 2024-10-08
+
+### Fixes :bug:
+
+- Fix import when pandas not installed.
+
+## [0.10.0] - 2024-10-07
+
+### New! :sparkles:
+
+- **New `TripsLayer`** for animating moving objects, which integrates with [MovingPandas](https://github.com/movingpandas/movingpandas). See the [Air Traffic Control example](https://developmentseed.org/lonboard/latest/examples/air-traffic-control/) and the [MovingPandas integration example](https://developmentseed.org/lonboard/latest/examples/ais-movingpandas/).
+- **New [`ColumnLayer`](https://developmentseed.org/lonboard/latest/api/layers/column-layer/)** for rendering extruded cylinders. See the [new `ColumnLayer` example](https://developmentseed.org/lonboard/latest/examples/column-layer/).
+- **Removed required dependencies!** `geopandas`, `pandas`, `shapely`, `pyarrow`, `matplotlib`, and `palettable` are now _optional_ dependencies. Lonboard will still work out of the box with them, but they aren't required to use Lonboard. This gives Lonboard a smaller footprint and makes it easier to use in environments such as [Pyodide](https://pyodide.org/).
+- You can now **draw bounding boxes on the map**. This is exposed as the `selected_bounds` attribute on the `Map` object, stored as a two-dimensional bounding box `(minx, miny, maxx, maxy)`.
+- **Improved documentation**
+  - [How to use Lonboard in pyodide](https://developmentseed.org/lonboard/latest/ecosystem/pyodide/), a Python environment that is fully running in your browser.
+  - Add linked maps example by @ATL2001 in https://github.com/developmentseed/lonboard/pull/655
+  - Add troubleshooting doc by @kylebarron in https://github.com/developmentseed/lonboard/pull/654
+  - Add longraph to showcase by @kylebarron in https://github.com/developmentseed/lonboard/pull/595
+- **New `Map.add_layer` method** for easily adding more layer(s) to an existing `Map` instance.
+- Add `highlight_color` to change the color of `auto_highlight` by @kylebarron in https://github.com/developmentseed/lonboard/pull/666
+- Use deterministic colors in `viz` by @kylebarron in https://github.com/developmentseed/lonboard/pull/621
+- Categorical data filtering. The `DataFilterExtension` now has a [`filter_categories` attribute](https://developmentseed.org/lonboard/latest/api/layer-extensions/data-filter-extension/#lonboard.layer_extension.DataFilterExtension--filter_categories) that lets you filter categorical data on the map. by @kylebarron in https://github.com/developmentseed/lonboard/pull/609
+
+### Breaking Changes :hammer:
+
+- The tooltip shown on hover was **replaced with a side panel**. You now must **click** on a geometry to view its attributes. By @vgeorge in https://github.com/developmentseed/lonboard/pull/636
+
+### Fixes :bug:
+
+- We've switched from storing `list` objects to storing `tuple` objects (e.g. the list of layers in a `Map`). The immutability of the `tuple` ensures that a any changes in the sequence of layers will be propagated to the frontend.Fixed in https://github.com/developmentseed/lonboard/pull/620
+- A class of bugs was fixed when using Arrow input, where the chunking structure of the main `table` did not match the chunking of accessors. Fixed in https://github.com/developmentseed/lonboard/pull/644
+- Fix reading from DuckDB with only geometry column by @kylebarron in https://github.com/developmentseed/lonboard/pull/625
+- Fix attribution by @vgeorge in https://github.com/developmentseed/lonboard/pull/561
+
+### New Contributors
+
+- @MarcSkovMadsen made their first contribution in https://github.com/developmentseed/lonboard/pull/539
+- @ATL2001 made their first contribution in https://github.com/developmentseed/lonboard/pull/655
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.9.3...v0.10.0
+
+## [0.9.3] - 2024-05-27
+
+### Fixes :bug:
+
+- Fix reprojecting GeoArrow input by @kylebarron in https://github.com/developmentseed/lonboard/pull/532
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.9.2...v0.9.3
+
+## [0.9.2] - 2024-05-14
+
+### Fixes :bug:
+
+- Reverse the layer order for automatically split geometry by @RaczeQ in https://github.com/developmentseed/lonboard/pull/516
+
+### What's Changed
+
+- Perf: Use ravel, not flatten, for numpy to pyarrow by @kylebarron in https://github.com/developmentseed/lonboard/pull/512
+- Update docstring in as_html by @kylebarron in https://github.com/developmentseed/lonboard/pull/519
+- Add type checks to fly_to by @kylebarron in https://github.com/developmentseed/lonboard/pull/521
+- Add pypi classifiers by @kylebarron in https://github.com/developmentseed/lonboard/pull/523
+
+### New Contributors
+
+- @RaczeQ made their first contribution in https://github.com/developmentseed/lonboard/pull/516
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.9.1...v0.9.2
+
+## [0.9.1] - 2024-05-07
+
+### Fixes :bug:
+
+- Fix parquet-wasm WASM version mismatch by @kylebarron in https://github.com/developmentseed/lonboard/pull/508
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.9.0...v0.9.1
+
+## [0.9.0] - 2024-05-06
+
+### New! :sparkles:
+
+- Direct [DuckDB Spatial](https://duckdb.org/docs/extensions/spatial.html) integration. Refer to the [DuckDB example notebook](https://developmentseed.org/lonboard/latest/examples/duckdb/) and the [DuckDB page](https://developmentseed.org/lonboard/latest/ecosystem/duckdb/) in the documentation. by @kylebarron in https://github.com/developmentseed/lonboard/pull/498
+- Add [overture buildings notebook](https://developmentseed.org/lonboard/latest/examples/overture-maps/) by @kylebarron in https://github.com/developmentseed/lonboard/pull/479
+- Adding [PathStyleExtension](https://developmentseed.org/lonboard/latest/api/layer-extensions/path-style-extension/) code by @shriv in https://github.com/developmentseed/lonboard/pull/487
+- Handle mixed geometry types in `viz` by @kylebarron in https://github.com/developmentseed/lonboard/pull/495
+- Render map as static HTML file by @kylebarron in https://github.com/developmentseed/lonboard/pull/474. You can use `Map.as_html` to render a map in notebook environments that support HTML but not widgets.
+- Improved integration with [geoarrow-pyarrow](https://geoarrow.org/geoarrow-python/main/pyarrow.html) by @kylebarron in https://github.com/developmentseed/lonboard/pull/470
+
+### Fixes :bug:
+
+- Updated Map keyword arguments by @kylebarron in https://github.com/developmentseed/lonboard/pull/496
+- validate basemap style is a url by @kylebarron in https://github.com/developmentseed/lonboard/pull/497
+
+### New Contributors
+
+- @willemarcel made their first contribution in https://github.com/developmentseed/lonboard/pull/486
+- @shriv made their first contribution in https://github.com/developmentseed/lonboard/pull/487
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.8.0...v0.9.0
+
+## [0.8.0] - 2024-04-05
+
+### New! :sparkles:
+
+- A new [`PolygonLayer`](https://developmentseed.org/lonboard/v0.8.0/api/layers/polygon-layer/)! This layer renders polygon outlines for easier visibility. @kylebarron in https://github.com/developmentseed/lonboard/pull/330
+- An example using `PolygonLayer` by @naomatheus in https://github.com/developmentseed/lonboard/pull/351
+- Sync view state between JS and Python by @kylebarron in https://github.com/developmentseed/lonboard/pull/448
+- Support geoarrow array input into `viz()` by @kylebarron in https://github.com/developmentseed/lonboard/pull/427
+- Internal architecture documentation by @kylebarron in https://github.com/developmentseed/lonboard/pull/450
+
+### Fixes :bug:
+
+- Fix CLI with unset `geometry_name` by @kylebarron in https://github.com/developmentseed/lonboard/pull/451
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.7.1...v0.8.0
+
+## [0.7.1] - 2024-03-22
+
+### Fixes :bug:
+
+- Fix CLI with geopackage files by @kylebarron in https://github.com/developmentseed/lonboard/pull/434
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.7.0...v0.7.1
+
+## [0.7.0] - 2024-03-21
+
+### New! :sparkles:
+
+- There's a [new command-line interface (CLI)](https://developmentseed.org/lonboard/v0.7.0/cli)! Use the `lonboard` command to quickly visualize one or more data files readable by GDAL! For example: `lonboard admins.geojson features.gpkg`. By @kylebarron in https://github.com/developmentseed/lonboard/pull/379
+- Type hinting for constructors and `from_geopandas` method. This should make it easier to pass the correct parameters into layers. This has been tested to work in IDEs like VSCode, but unfortunately appears not to work in JupyterLab. By @kylebarron in https://github.com/developmentseed/lonboard/pull/399
+
+  ![Type hints are now supported in constructors.](assets/type-hints-constructor.jpg)
+
+- Warn on missing CRS. One of the most common reasons that you might see an empty map is from accidentally visualizing data that is not in EPSG 4326 (longitude-latitude). We now emit a warning for data that doesn't have a CRS defined on the data. By @kylebarron in https://github.com/developmentseed/lonboard/pull/395.
+- Lonboard is [now on `conda-forge`](https://prefix.dev/channels/conda-forge/packages/lonboard)! Install with `conda install -c conda-forge lonboard`. By @giswqs in https://github.com/developmentseed/lonboard/pull/223
+- Add [PointCloudLayer](https://developmentseed.org/lonboard/v0.7.0/api/layers/point-cloud-layer/). By @kylebarron in https://github.com/developmentseed/lonboard/pull/396
+- Add [fly-to map action](https://developmentseed.org/lonboard/v0.7.0/api/map/#lonboard.Map.fly_to) to "fly" the map to a new location. By @kylebarron in https://github.com/developmentseed/lonboard/pull/408
+- [Docs showcase page](https://developmentseed.org/lonboard/v0.7.0/examples/) by @kylebarron in https://github.com/developmentseed/lonboard/pull/401
+- Improve default colors in [`viz`](https://developmentseed.org/lonboard/v0.7.0/api/viz/). We now attempt to apply some basic styling onto data passed into `viz`. This will likely further improve in the future. By @kylebarron in https://github.com/developmentseed/lonboard/pull/389
+
+### Fixes :bug:
+
+- Set exported HTML height to 100% by @kylebarron in https://github.com/developmentseed/lonboard/pull/377
+- Raise error on single input to MultiRangeSlider by @kylebarron in https://github.com/developmentseed/lonboard/pull/367
+- Fix pandas `to_numeric` FutureWarning by @kylebarron in https://github.com/developmentseed/lonboard/pull/368
+- Fix viewing polygons in local html files by @kylebarron in https://github.com/developmentseed/lonboard/pull/387
+- Fix: fix sliced array input for reprojection by @kylebarron in https://github.com/developmentseed/lonboard/pull/391
+- Fix: Don't reproject for epsg:4326 input by @kylebarron in https://github.com/developmentseed/lonboard/pull/392
+- Fix: Fix weighted centroid calculation by @kylebarron in https://github.com/developmentseed/lonboard/pull/393
+- Fix `viz()` with `__geo_interface__` input by @kylebarron in https://github.com/developmentseed/lonboard/pull/426
+- Add DataFilterExtension notebook to website by @kylebarron in https://github.com/developmentseed/lonboard/pull/362
+- Allow non-compliant geoarrow CRS metadata by @kylebarron in https://github.com/developmentseed/lonboard/pull/369
+- Automatically parse geoarrow.wkb to native geoarrow by @kylebarron in https://github.com/developmentseed/lonboard/pull/372
+- Parse GeoParquet metadata by @kylebarron in https://github.com/developmentseed/lonboard/pull/407
+- CLI: 'crs' in geoparquet metadata should be optional. by @jwass in https://github.com/developmentseed/lonboard/pull/411
+
+### Other changes
+
+- Creating a new user bug report by @emmalu in https://github.com/developmentseed/lonboard/pull/386
+- Update epic template by @emmalu in https://github.com/developmentseed/lonboard/pull/382
+- NormalAccessor by @naomatheus in https://github.com/developmentseed/lonboard/pull/376
+- Conda: Try including `manifest.in` file for `static` folder inclusion by @kylebarron in https://github.com/developmentseed/lonboard/pull/421
+- Switch to animated hero image by @kylebarron in https://github.com/developmentseed/lonboard/pull/423
+- Add CRS to GeoDataFrame in notebook examples by @kylebarron in https://github.com/developmentseed/lonboard/pull/419
+
+## New Contributors
+
+- @emmalu made their first contribution in https://github.com/developmentseed/lonboard/pull/382
+- @naomatheus made their first contribution in https://github.com/developmentseed/lonboard/pull/376
+- @jwass made their first contribution in https://github.com/developmentseed/lonboard/pull/411
+- @giswqs made their first contribution in https://github.com/developmentseed/lonboard/pull/223
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.6.0...v0.7.0
+
+## [0.6.0] - 2024-02-13
+
+### New! :sparkles:
+
+- DataFilterExtension by @kylebarron in https://github.com/developmentseed/lonboard/pull/278
+- Multi-range sliders for DataFilterExtension by @kylebarron in https://github.com/developmentseed/lonboard/pull/340
+- BitmapLayer and BitmapTileLayer by @kylebarron in https://github.com/developmentseed/lonboard/pull/288
+- Improved GeoArrow interop by @kylebarron in https://github.com/developmentseed/lonboard/pull/308
+- Allow passing a positional `layers` object into `Map` by @kylebarron in https://github.com/developmentseed/lonboard/pull/319
+- GeoArrow-based multithreaded coordinate reprojection by @kylebarron in https://github.com/developmentseed/lonboard/pull/337
+- Support `pyarrow.Table` with `geoarrow.pyarrow` extension types as geometry columns by @jorisvandenbossche in https://github.com/developmentseed/lonboard/pull/218
+- Add ecosystem/integrations documentation by @kylebarron in https://github.com/developmentseed/lonboard/pull/350
+
+### Fixes :bug:
+
+- Add font to index.css to fix static HTML export by @jtmiclat in https://github.com/developmentseed/lonboard/pull/284
+- Fix displaying tooltip for first row by @kylebarron in https://github.com/developmentseed/lonboard/pull/287
+- accept matplotlib colormap input to apply_cmap by @kylebarron in https://github.com/developmentseed/lonboard/pull/289
+- Use preferred OSM tile url by @kylebarron in https://github.com/developmentseed/lonboard/pull/290
+- set max zoom on osm layer by @kylebarron in https://github.com/developmentseed/lonboard/pull/291
+- Update contributor docs by @kylebarron in https://github.com/developmentseed/lonboard/pull/316
+- Check epsg:4326 bounds in layer creation by @kylebarron in https://github.com/developmentseed/lonboard/pull/317
+- add reference for installing from source by @kylebarron in https://github.com/developmentseed/lonboard/pull/318
+- Fix inferring number of rows per chunk by @kylebarron in https://github.com/developmentseed/lonboard/pull/327
+- Fix null checks by @kylebarron in https://github.com/developmentseed/lonboard/pull/331
+- Set max number of chunks per layer by @kylebarron in https://github.com/developmentseed/lonboard/pull/332
+- Move accessor length validation to serialization by @kylebarron in https://github.com/developmentseed/lonboard/pull/333
+- Deduplicate serialization for accessors by @kylebarron in https://github.com/developmentseed/lonboard/pull/334
+- Multi-dimensional GPU-based data filtering by @kylebarron in https://github.com/developmentseed/lonboard/pull/335
+- Bump anywidget to 0.9 & simplify Wasm initialization by @kylebarron in https://github.com/developmentseed/lonboard/pull/344
+- Fix null checks by @kylebarron in https://github.com/developmentseed/lonboard/pull/348
+- docs fixes by @kylebarron in https://github.com/developmentseed/lonboard/pull/354
+- Add `DataFilterExtension` example by @kylebarron in https://github.com/developmentseed/lonboard/pull/358
+- fix arc layer default arguments by @kylebarron in https://github.com/developmentseed/lonboard/pull/359
+
+## New Contributors
+
+- @jtmiclat made their first contribution in https://github.com/developmentseed/lonboard/pull/284
+- @jorisvandenbossche made their first contribution in https://github.com/developmentseed/lonboard/pull/218
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.5.0...v0.6.0
+
+## [0.5.0] - 2023-12-01
+
+### New Features
+
+- Improve map height by @vgeorge in https://github.com/developmentseed/lonboard/pull/220
+- Add method to apply a categorical colormap by @kylebarron in https://github.com/developmentseed/lonboard/pull/251
+- Deduce environment and set map height in colab and vscode by @kylebarron in https://github.com/developmentseed/lonboard/pull/252
+- Add various carto basemaps as options by @kylebarron in https://github.com/developmentseed/lonboard/pull/268
+- Sync the clicked index back to Python by @kylebarron in https://github.com/developmentseed/lonboard/pull/270
+- Set `width_min_pixels` in PathLayer example by @kylebarron in https://github.com/developmentseed/lonboard/pull/276
+- Bump deck.gl layers for performance benefits by @kylebarron in https://github.com/developmentseed/lonboard/pull/277
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.4.2...v0.5.0
+
+## [0.4.2] - 2023-11-13
+
+### Fixed
+
+- Fixed ScatterplotLayer rendering by @kylebarron in https://github.com/developmentseed/lonboard/pull/246
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.4.1...v0.4.2
+
+## [0.4.1] - 2023-11-13
+
+### Fixed
+
+- Fixed Polygon rendering by @kylebarron in https://github.com/developmentseed/lonboard/pull/243
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.4.0...v0.4.1
+
+## [0.4.0] - 2023-11-10
+
+### New Features
+
+- New `HeatmapLayer`
+- New `experimental` module, with new layers (`ArcLayer`, `TextLayer`) and "layer extensions" (`BrushingExtension`, `CollisionFilterExtension`).
+- New "migration" notebook using the experimental `ArcLayer`.
+
+### Fixed
+
+- Add pandas v2 requirement by @kylebarron in https://github.com/developmentseed/lonboard/pull/229
+- bump anywidget to 0.7.1 by @kylebarron in https://github.com/developmentseed/lonboard/pull/233
+
+  This should error when the JS files have not been included when packaging.
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.3.0...v0.4.0
+
+## [0.3.0] - 2023-11-07
+
+### New Features
+
+- Save widget to standalone HTML file by @kylebarron in https://github.com/developmentseed/lonboard/pull/199
+- Support for rendering inside Visual Studio Code
+- Allow customized picking radius by @kylebarron in https://github.com/developmentseed/lonboard/pull/212
+- New example notebooks
+- Automatically downcast data types in `from_geopandas` by @kylebarron in https://github.com/developmentseed/lonboard/pull/195
+
+### Fixed
+
+- Allow pandas series as accessor to FloatAccessor by @kylebarron in https://github.com/developmentseed/lonboard/pull/208
+- Raise error when creating class with unknown keyword argument by @kylebarron in https://github.com/developmentseed/lonboard/pull/209
+- fix tooltip rendering when not hovering over an object by @kylebarron in https://github.com/developmentseed/lonboard/pull/215
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.2.0...v0.3.0
+
+## [0.2.0] - 2023-11-01
+
+### Breaking Changes
+
+- Layers no longer render a map object. Instead, pass one or more layer instances into a `lonboard.Map` and display that.
+
+### New Features
+
+- Support multiple layers on a single map.
+- Tooltip with data information on hover.
+- Allow hex string color input to ColorAccessor.
+- Versioned documentation website
+- New examples
+- Experimental API to change map height
+
+### Fixed
+
+- Fix handling of 3d coordinates by @kylebarron in https://github.com/developmentseed/lonboard/pull/160
+- Improved validation error messages by @kylebarron in https://github.com/developmentseed/lonboard/pull/161
+
+### New Contributors
+
+- @chrisgervang made their first contribution in https://github.com/developmentseed/lonboard/pull/150
+
+**Full Changelog**: https://github.com/developmentseed/lonboard/compare/v0.1.2...v0.2.0
+
+## [0.1.2] - 2023-10-24
+
+- _Actually_ update `@geoarrow/deck.gl-layers` to version 0.2.0, whoops 😅
+
+## [0.1.1] - 2023-10-23
+
+- Updates to `@geoarrow/deck.gl-layers` version 0.2.0:
+  - Fixed MultiPolygon rendering
+  - Fixed rendering of polygons with holes.
+  - Polygon rendering is roughly 35% faster.
+
+## [0.1.0] - 2023-10-17
+
+- Initial public release.
+- Initial support for `ScatterplotLayer`, `PathLayer`, and `SolidPolygonLayer`.

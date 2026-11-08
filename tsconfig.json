@@ -1,0 +1,28 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolvePackageJsonExports": false,
+    "target": "ES2022",
+
+    "outDir": "./dist",
+    "rootDir": "src",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+
+    "noEmit": false,
+    "noEmitOnError": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+
+    "jsx": "react-jsx",
+    "allowJs": true
+  }
+}

@@ -1,0 +1,95 @@
+name: Python test
+
+# On every pull request, but only on push to master
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python ${{ matrix.python-version }}
+        id: setup-python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - uses: pnpm/action-setup@v6
+
+      # Uses the volta-pinned version in package.json
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: package.json
+          cache: "pnpm"
+
+      - name: Install JS dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install a specific version of uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          version: "0.4.x"
+
+      # Note: we don't install the "watchfiles" group on CI because it gives
+      # threading errors when running tests. See
+      # https://github.com/developmentseed/lonboard/pull/234
+      # https://github.com/manzt/anywidget/issues/374
+      - name: Install root project
+        run: uv sync --no-group watchfiles
+
+      - name: Build JS bundle
+        run: pnpm run build
+
+      - name: Install Playwright browsers
+        run: |
+          uv run playwright install chromium
+
+      - name: Run tests
+        run: uv run pytest
+
+      # Ensure docs build without warnings
+      - name: Check docs
+        if: "${{ matrix.python-version == 3.11 }}"
+        run: uv run --group docs mkdocs build --strict
+
+      # Use ruff-action so we get annotations in the Github UI
+      - uses: astral-sh/ruff-action@v3
+
+      - name: Cache pre-commit virtualenvs
+        uses: actions/cache@v6
+        if: "${{ matrix.python-version == 3.11 }}"
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-3|${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: run pre-commit
+        if: "${{ matrix.python-version == 3.11 }}"
+        run: |
+          uv run pre-commit run --show-diff-on-failure --color=always --all-files
+
+  jupyterlite:
+    name: Build JupyterLite site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install a specific version of uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          version: "0.4.x"
+
+      # The same build as deploy-jupyterlite.yml, without publishing. The
+      # script fails if a notebook or the built site isn't fit to publish.
+      - name: Build JupyterLite site
+        run: uv run --locked --only-group jupyterlite python scripts/build_jupyterlite.py --output-dir "$RUNNER_TEMP/jupyterlite-site"
